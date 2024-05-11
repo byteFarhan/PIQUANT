@@ -9,6 +9,10 @@ export default {
         "roboto-slab": "'Roboto Slab', serif",
         oswald: "'Oswald', sans-serif",
       },
+      colors: {
+        primary: "#ffd71b",
+        secondary: "#111111",
+      },
     },
   },
   plugins: [require("daisyui")],

@@ -1,6 +1,7 @@
 import Navbar from "../../Shared/Navbar/Navbar";
 import bannerBg from "../../../assets/home-1-slide-background.jpg";
 import Carousel from "../Carousel/Carousel";
+import BookATable from "../BookATable/BookATable";
 
 const HomePage = () => {
   return (
@@ -12,7 +13,11 @@ const HomePage = () => {
       >
         <Carousel />
       </section>
+      <BookATable />
       {/* <Carousel /> */}
+      {/* <button className="btn-base btn-primary">Test Item</button> */}
+      {/* <button className="btn-base btn-secondary">Test Item</button> */}
+      {/* <button className="btn-base btn-outline">Test Item</button> */}
     </section>
   );
 };
