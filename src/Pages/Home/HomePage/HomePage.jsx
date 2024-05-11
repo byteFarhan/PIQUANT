@@ -1,6 +1,7 @@
 import bannerBg from "../../../assets/home-1-slide-background.jpg";
 import Carousel from "../Carousel/Carousel";
 import BookATable from "../BookATable/BookATable";
+import Awards from "../Awards/Awards";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
         <Carousel />
       </section>
       <BookATable />
+      <Awards />
       {/* <Carousel /> */}
       {/* <button className="btn-base btn-primary">Test Item</button> */}
       {/* <button className="btn-base btn-secondary">Test Item</button> */}
