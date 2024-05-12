@@ -1,10 +1,39 @@
-import React from "react";
+import toast from "react-hot-toast";
 import { FaGithub } from "react-icons/fa";
+import useAuth from "../../../Hooks/useAuth";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { signInWithGoogle, signInWithGithub } = useAuth();
+  // console.log(signInWithGithub, signInWithGoogle);
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then(() => {
+        toast.success("Login successfull.");
+        navigate(location.state ? location.state : "/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+  const handleGithubSignIn = () => {
+    signInWithGithub()
+      .then(() => {
+        toast.success("Login successfull.");
+        navigate(location.state ? location.state : "/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
     <div>
-      <div className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg cursor-pointer hover:bg-gray-50 ">
+      <div
+        onClick={handleGoogleSignIn}
+        className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg cursor-pointer hover:bg-gray-50 "
+      >
         <div className="px-4 py-2">
           <svg className="w-6 h-6" viewBox="0 0 40 40">
             <path
@@ -30,9 +59,12 @@ const SocialLogin = () => {
           Sign in with Google
         </span>
       </div>
-      <div className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg cursor-pointer hover:bg-gray-50 ">
+      <div
+        onClick={handleGithubSignIn}
+        className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg cursor-pointer hover:bg-gray-50 "
+      >
         <div className="px-4 py-2">
-          <FaGithub className="text-2xl"/>
+          <FaGithub className="text-2xl" />
         </div>
 
         <span className="w-5/6 px-4 py-3 font-bold text-center">
