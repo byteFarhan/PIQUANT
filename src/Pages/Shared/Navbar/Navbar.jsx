@@ -6,6 +6,27 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo-normal.png";
 
 const Navbar = () => {
+  const user = false;
+  const navItems = (
+    <>
+      <NavLink
+        to={`/registation`}
+        className={({ isActive, isPending }) =>
+          `nav-item ${isPending ? "" : isActive ? "bg-gray-200" : ""}`
+        }
+      >
+        Registation
+      </NavLink>
+      <NavLink
+        to={`/login`}
+        className={({ isActive, isPending }) =>
+          `nav-item ${isPending ? "" : isActive ? "bg-gray-200" : ""}`
+        }
+      >
+        Login
+      </NavLink>
+    </>
+  );
   const [isOpen, setIsOpen] = useState(false);
   //   const handleToggleMenue = () => {
   //     setIsOpen(!isOpen);
@@ -52,7 +73,7 @@ const Navbar = () => {
                     to={`/`}
                     className={({ isActive, isPending }) =>
                       `nav-item ${
-                        isPending ? "" : isActive ? "bg-gray-100" : ""
+                        isPending ? "" : isActive ? "bg-gray-200" : ""
                       }`
                     }
                   >
@@ -62,7 +83,7 @@ const Navbar = () => {
                     to={`/all-foods`}
                     className={({ isActive, isPending }) =>
                       `nav-item ${
-                        isPending ? "" : isActive ? "bg-gray-100" : ""
+                        isPending ? "" : isActive ? "bg-gray-200" : ""
                       }`
                     }
                   >
@@ -72,16 +93,21 @@ const Navbar = () => {
                     to={`/gallary`}
                     className={({ isActive, isPending }) =>
                       `nav-item ${
-                        isPending ? "" : isActive ? "bg-gray-100" : ""
+                        isPending ? "" : isActive ? "bg-gray-200" : ""
                       }`
                     }
                   >
                     Gallary
                   </NavLink>
+                  {!user && navItems}
                 </ul>
 
-                <div className="flex items-center mt-4 lg:mt-0">
-                  <button
+                <div
+                  className={`${
+                    user ? "" : "hidden"
+                  } flex items-center mt-4 lg:mt-0`}
+                >
+                  {/* <button
                     className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
                     aria-label="show notifications"
                   >
@@ -99,14 +125,16 @@ const Navbar = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </button>
+                  </button> */}
 
                   <button
                     type="button"
                     className="flex items-center focus:outline-none"
                     aria-label="toggle profile dropdown"
                   >
-                    <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+                    <div
+                      className={`overflow-hidden border-2 border-gray-400 rounded-full w-9 h-9`}
+                    >
                       <img
                         src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
                         className="object-cover w-full h-full"

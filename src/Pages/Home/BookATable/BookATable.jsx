@@ -4,16 +4,24 @@ import { IoPersonSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 
 const BookATable = () => {
-  const date = new Date();
-  const options = {
-    day: "numeric",
-    month: "numeric",
-    year: "numeric",
+  //   const date = new Date();
+  //   const options = {
+  //     day: "numeric",
+  //     month: "numeric",
+  //     year: "numeric",
+  //   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(e.target);
   };
+  //   const handleSelect = (e) => {
+  //     e.preventDefault();
+  //     console.log(e.target.person.value);
+  //   };
   return (
     <section className="bg-[#f5f5f5] py-8 lg:py-10">
       <div className="px-5 mx-auto max-w-7xl lg:px-0">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="flex flex-col justify-between gap-4 md:flex-row lg:gap-8">
             {/* <label
               //   for="email"
@@ -26,6 +34,7 @@ const BookATable = () => {
                 <IoPersonSharp className="block mx-3 text-2xl align-middle" />
               </span>
               <select
+                // onChange={handleSelect}
                 className="block w-full py-2.5 text-socendary placeholder-gray-400/70 bg-white pl-11 pr-5 rtl:pr-11 rtl:pl-5 rounded-none focus:outline-none ring-2 ring-secondary"
                 name="person"
                 id="person"
@@ -68,7 +77,10 @@ const BookATable = () => {
               />
             </div>
             <div className="w-full">
-              <button className="flex items-center justify-center w-full px-5 py-3 btn-base btn-primary">
+              <button
+                type="submit"
+                className="flex items-center justify-center w-full px-5 py-3 btn-base btn-primary"
+              >
                 <FaHandPointRight className="mr-2" /> Book A Table
               </button>
             </div>

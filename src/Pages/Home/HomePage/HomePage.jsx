@@ -3,6 +3,8 @@ import Carousel from "../Carousel/Carousel";
 import BookATable from "../BookATable/BookATable";
 import Awards from "../Awards/Awards";
 import Testimonial from "../Testimonial/Testimonial";
+import BestFoods from "../BestFoods/BestFoods";
+// import Test from "../Testimonial/Test";
 
 const HomePage = () => {
   return (
@@ -14,12 +16,10 @@ const HomePage = () => {
         <Carousel />
       </section>
       <BookATable />
+      <BestFoods />
       <Testimonial />
+      {/* <Test /> */}
       <Awards />
-      {/* <Carousel /> */}
-      {/* <button className="btn-base btn-primary">Test Item</button> */}
-      {/* <button className="btn-base btn-secondary">Test Item</button> */}
-      {/* <button className="btn-base btn-outline">Test Item</button> */}
     </section>
   );
 };

@@ -12,7 +12,8 @@ import testimonialIcon from "../../../assets/testimonials-icon.png";
 // import "./styles.css";
 
 // import required modules
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { EffectFade } from "swiper/modules";
+// import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import TestimonialItem from "./TestimonialItem/TestimonialItem";
 import SwiperNavButtons from "./SwiperNavButtons/SwiperNavButtons";
 const Testimonial = () => {
