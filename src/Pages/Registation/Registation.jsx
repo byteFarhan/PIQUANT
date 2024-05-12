@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo-normal.png";
@@ -7,12 +7,12 @@ import bgImg from "../../assets/pattern-2.png";
 import { IoPersonOutline } from "react-icons/io5";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
+import useAuth from "../../Hooks/useAuth";
 
 const Registation = () => {
-  const { createUserWithEmail, setUser, user } = useContext(AuthContext);
+  const { createUserWithEmail, setUser, user } = useAuth();
   const location = useLocation();
   const {
     register,
