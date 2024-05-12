@@ -6,9 +6,19 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo-normal.png";
 import useAuth from "../../../Hooks/useAuth";
 import { IoExitOutline } from "react-icons/io5";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
-  const { user } = useAuth();
+  const { user, userSignOut } = useAuth();
+  const handleLogout = () => {
+    userSignOut()
+      .then(() => {
+        toast.success("Logout successfull.");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
 
   const navItems = (
     <>
@@ -133,7 +143,10 @@ const Navbar = () => {
                           className="dropdown-content z-[3] menu px-3 py-4 shadow bg-base-100 rounded-box w-52 text-white hidden lg:block"
                         >
                           <li>
-                            <p className="btn-base btn-secondary px-5 py-2.5 cursor-pointer">
+                            <p
+                              onClick={handleLogout}
+                              className="btn-base btn-secondary px-5 py-2.5 cursor-pointer"
+                            >
                               Logout <IoExitOutline />
                             </p>
                           </li>
@@ -143,7 +156,10 @@ const Navbar = () => {
                         </h3>
                       </button>
                     </div>
-                    <button className="btn-base btn-secondary px-5 py-2.5 lg:hidden mt-4">
+                    <button
+                      onClick={handleLogout}
+                      className="btn-base btn-secondary px-5 py-2.5 lg:hidden mt-4"
+                    >
                       Logout
                     </button>
                   </>
