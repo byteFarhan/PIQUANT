@@ -34,3 +34,24 @@
     @apply bg-transparent border-2 border-secondary hover:bg-secondary hover:text-white;
   }
 }
+
+* {
+  scroll-behavior: smooth;
+  /* scrollbar-width: 5px;
+  scrollbar-color: blue; */
+}
+
+/* For WebKit (Safari, Chrome) */
+::-webkit-scrollbar {
+  width: 0.8rem; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* color of the track */
+  /* background: #f1f1f1; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffd71b; /* color of the scrollbar */
+  /* border-radius: 999px; */
+}

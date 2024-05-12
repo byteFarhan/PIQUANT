@@ -9,14 +9,14 @@ const Navbar = () => {
   const user = false;
   const navItems = (
     <>
-      <NavLink
+      {/* <NavLink
         to={`/registation`}
         className={({ isActive, isPending }) =>
           `nav-item ${isPending ? "" : isActive ? "bg-gray-200" : ""}`
         }
       >
         Registation
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to={`/login`}
         className={({ isActive, isPending }) =>

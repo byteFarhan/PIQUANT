@@ -37,10 +37,10 @@ const Carousel = () => {
       <section className="relative h-full">
         <div className="absolute z-10 flex justify-between w-full px-5 lg:px-10 top-1/2">
           <div onClick={prevSlide} className="">
-            <GrPrevious className="text-xl font-black text-white transition-all duration-75 ease-in md:text-2xl lg:text-3xl hover:text-gray-300" />
+            <GrPrevious className="text-xl font-black text-white transition-all duration-75 ease-in cursor-pointer md:text-2xl lg:text-3xl hover:text-gray-300" />
           </div>
           <div onClick={nextSlide} className="">
-            <GrNext className="text-xl font-black text-white transition-all duration-75 ease-in md:text-2xl lg:text-3xl hover:text-gray-300" />
+            <GrNext className="text-xl font-black text-white transition-all duration-75 ease-in cursor-pointer md:text-2xl lg:text-3xl hover:text-gray-300" />
           </div>
         </div>
 
