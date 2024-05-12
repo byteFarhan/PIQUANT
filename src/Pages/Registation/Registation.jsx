@@ -1,14 +1,67 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo-normal.png";
 import img from "../../assets/home-1-image-3.jpg";
 import bgImg from "../../assets/pattern-2.png";
 import { IoPersonOutline } from "react-icons/io5";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import { useForm } from "react-hook-form";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import toast from "react-hot-toast";
 
 const Registation = () => {
+  const { createUserWithEmail, setUser, user } = useContext(AuthContext);
+  const location = useLocation();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
   const [showPassword, setShowPassword] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const onSubmit = (data) => {
+    setSuccess("");
+    setError("");
+    // console.log(data);
+    const { name, email, password, photoURL } = data;
+
+    if (password.length < 6) {
+      setError("Password must be longer than 6 characters!");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setError("Password should have at least one uppercase character!");
+      return;
+    } else if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password)) {
+      setError("Password should have at least one spacial character!");
+      return;
+    }
+
+    createUserWithEmail(email, password)
+      .then((result) => {
+        // console.log(result.user);
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photoURL,
+        }).then(() => {
+          setUser({ ...result.user, displayName: name, photoURL });
+          setSuccess("Registation successfull.");
+          toast.success("Registation successfull.");
+          reset();
+          navigate(location.state ? location.state : "/");
+        });
+        setSuccess("Registation successfull.");
+      })
+      .catch((error) => {
+        setError(error.message);
+        toast.error(error.message);
+      });
+  };
   return (
     <section className="" style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="flex items-center justify-center py-20">
@@ -38,7 +91,7 @@ const Registation = () => {
 
               <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
             </div>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mt-4">
                 <label
                   className="block mb-2 text-sm text-gray-600"
@@ -55,8 +108,14 @@ const Registation = () => {
                     type="text"
                     className="block w-full py-2.5 text-secondary bg-white border rounded-none px-11 focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary"
                     placeholder="John Doe"
+                    {...register("name", { required: true })}
                   />
                 </div>
+                {errors.name && (
+                  <span className="mt-2 text-red-600">
+                    This field is required
+                  </span>
+                )}
               </div>
               <div className="mt-4">
                 <label
@@ -87,27 +146,39 @@ const Registation = () => {
                     type="email"
                     className="block w-full py-2.5 text-secondary bg-white border rounded-none px-11 focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary"
                     placeholder="john@example.com"
+                    {...register("email", { required: true })}
                   />
                 </div>
+                {errors.email && (
+                  <span className="mt-2 text-red-600">
+                    This field is required
+                  </span>
+                )}
               </div>
               <div className="mt-4">
                 <label
                   //   for="domain name"
-                  class="block mb-2 text-sm text-gray-600"
+                  className="block mb-2 text-sm text-gray-600"
                 >
                   Photo Url
                 </label>
 
-                <div class="flex items-center mt-2">
-                  <p class="py-[10px] text-secondary bg-white border-l-2 border-y-2 border-secondary rounded-none px-1 opacity-60">
+                <div className="flex items-center mt-2">
+                  <p className="py-[10px] text-secondary bg-white border-l-2 border-y-2 border-secondary rounded-none px-1 opacity-60">
                     http://
                   </p>
                   <input
                     type="text"
                     placeholder="example.com"
-                    class="block w-full py-2.5 text-secondary bg-white border rounded-none px-2 focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary"
+                    className="block w-full py-2.5 text-secondary bg-white border rounded-none px-2 focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary"
+                    {...register("photoURL", { required: true })}
                   />
                 </div>
+                {errors.photoURL && (
+                  <span className="mt-2 text-red-600">
+                    This field is required
+                  </span>
+                )}
               </div>
               <div className="mt-4">
                 <label className="block text-sm text-gray-700 dark:text-gray-300">
@@ -141,10 +212,21 @@ const Registation = () => {
                     type={showPassword ? "text" : "password"}
                     placeholder="********"
                     className="block w-full py-2.5 text-secondary bg-white border rounded-none px-11 focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary"
+                    {...register("password", { required: true })}
                   />
                 </div>
+                {errors.password && (
+                  <span className="mt-2 text-red-600">
+                    This field is required
+                  </span>
+                )}
               </div>
-              <div className="mt-6">
+              <div className="mt-2">
+                {success && <p className="text-sm text-gray-700">{success}</p>}
+                {error && <p className="text-sm text-red-700">{error}</p>}
+              </div>
+
+              <div className="mt-4">
                 <button
                   type="submit"
                   className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white uppercase transition-colors duration-300 transform btn-base btn-secondary"
