@@ -1,13 +1,38 @@
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo-normal.png";
 import img from "../../assets/Mango-Chile-Chutney.jpg";
 import bgImg from "../../assets/pattern-2.png";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import useAuth from "../../Hooks/useAuth";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { signInWithEmail } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [showPassword, setShowPassword] = useState(false);
+  const onSubmit = (data) => {
+    // console.log(data);
+    const { email, password } = data;
+    signInWithEmail(email, password)
+      .then(() => {
+        toast.success("Login successfull.");
+        reset();
+        navigate(location.state ? location.state : "/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
     <section className="" style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="flex items-center justify-center py-20">
@@ -38,7 +63,7 @@ const Login = () => {
 
               <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
             </div>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mt-4">
                 <label
                   className="block mb-2 text-sm text-gray-600 "
@@ -68,8 +93,14 @@ const Login = () => {
                     type="email"
                     className="block w-full py-2.5 text-secondary bg-white border rounded-none px-11 focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary"
                     placeholder="john@example.com"
+                    {...register("email", { required: true })}
                   />
                 </div>
+                {errors.email && (
+                  <span className="mt-2 text-red-600">
+                    This field is required
+                  </span>
+                )}
               </div>
               <div className="mt-4">
                 <label className="block text-sm text-gray-700 dark:text-gray-300">
@@ -103,8 +134,14 @@ const Login = () => {
                     type={showPassword ? "text" : "password"}
                     placeholder="********"
                     className="block w-full py-2.5 text-secondary bg-white border rounded-none px-11 focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary"
+                    {...register("password", { required: true })}
                   />
                 </div>
+                {errors.password && (
+                  <span className="mt-2 text-red-600">
+                    This field is required
+                  </span>
+                )}
               </div>
               <div className="mt-6">
                 <button
