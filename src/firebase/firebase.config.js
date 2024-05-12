@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA7KGGciTnuI8c-LqbD7UUfqWGMUNKtH6E",
-  authDomain: "piquant-b9a11.firebaseapp.com",
-  projectId: "piquant-b9a11",
-  storageBucket: "piquant-b9a11.appspot.com",
-  messagingSenderId: "461281419096",
-  appId: "1:461281419096:web:64b7c675379239035e4f2d",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
