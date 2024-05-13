@@ -42,11 +42,14 @@ const FoodDetails = () => {
         <div className="p-3 mx-auto bg-white lg:grid md:p-6 lg:p-14 max-w-7xl lg:grid-cols-6 lg:gap-10">
           <div className="lg:col-span-4">
             <div className="relative">
-              <img
-                src={foodImage}
-                alt={foodName}
-                className="object-cover w-full h-[450px]"
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={foodImage}
+                  alt={foodName}
+                  className="object-cover cursor-pointer w-full h-[450px] transition-transform duration-200 delay-200 ease-in-out hover:scale-105"
+                />
+              </div>
+
               <div className="absolute z-20 p-3 md:p-4 lg:p-6 text-lg md:text-xl lg:text-2xl font-bold -rotate-[30deg] md:-rotate-[35deg] lg:-rotate-[45deg] rounded-full -top-3 -left-3 md:-top-4 md:-left-4 lg:-top-6 lg:-left-8 bg-primary text-secondary font-oswald">
                 ${price}
               </div>
@@ -87,7 +90,7 @@ const FoodDetails = () => {
                     <p className="pl-4 border-l-4 border-secondary">
                       {makingProcedure}
                     </p>
-                    <p className="flex flex-col gap-3 md:items-center md:flex-row text-secondary">
+                    <p className="flex flex-col gap-3 text-secondary">
                       Ingredients:{" "}
                       <span className="flex flex-wrap gap-2 md:gap-3">
                         {ingredients?.map((item, idx) => (
