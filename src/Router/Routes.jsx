@@ -4,6 +4,10 @@ import HomePage from "../Pages/Home/HomePage/HomePage";
 import Login from "../Pages/Login/Login";
 import Registation from "../Pages/Registation/Registation";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import FoodDetails from "../Pages/FoodDetails/FoodDetails";
+// import useAxiosSecure from "../Hooks/useAxiosSecure";
+
+// const axiosSecure = useAxiosSecure();
 
 const router = createBrowserRouter([
   {
@@ -14,6 +18,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "food/:id",
+        element: <FoodDetails />,
+        loader: ({ params }) => {
+          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params.id}`);
+        },
       },
       {
         path: "registation",
