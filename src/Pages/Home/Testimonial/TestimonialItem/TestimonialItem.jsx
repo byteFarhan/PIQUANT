@@ -41,7 +41,7 @@ const TestimonialItem = ({ name, description }) => {
             />
           </div>
         </div>
-        <h4 className="text-2xl font-bold text-center text-white">{name}</h4>
+        <h4 className="text-lg font-bold text-center text-white">{name}</h4>
       </div>
     </>
   );

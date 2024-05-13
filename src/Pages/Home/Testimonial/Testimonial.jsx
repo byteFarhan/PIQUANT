@@ -20,7 +20,7 @@ const Testimonial = () => {
   return (
     <section
       style={{ backgroundImage: `url(${testimonialBg})` }}
-      className="static w-full overflow-hidden bg-fixed bg-center bg-no-repeat bg-cover py-28 lg:bg-auto"
+      className="static w-full py-16 overflow-hidden bg-fixed bg-center bg-no-repeat bg-cover md:py-20 lg:py-28 lg:bg-auto"
     >
       <div className="">
         <div className="pb-10 space-y-4 text-center">
