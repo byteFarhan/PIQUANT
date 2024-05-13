@@ -49,20 +49,23 @@ const Login = () => {
               <img className="w-auto h-7 sm:h-8" src={logo} alt="" />
             </div>
 
-            <p className="mt-3 text-xl font-semibold text-center text-gray-800 font-oswald">
+            {/* <p className="mt-3 text-xl font-semibold text-center text-gray-800 font-oswald">
               Sign In Your Account
-            </p>
+            </p> */}
             <SocialLogin />
 
             <div className="flex items-center justify-between mt-4">
               <span className="w-1/5 border-b lg:w-1/4"></span>
 
-              <div className="text-xs text-center text-gray-500 uppercase hover:underline">
+              <div className="text-xs text-center text-gray-500 uppercase">
                 or login with email
               </div>
 
               <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
             </div>
+            {/* <p className="mt-3 text-xl font-semibold text-center text-gray-800 font-oswald">
+              Sign In Your Account
+            </p> */}
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mt-4">
                 <label

@@ -1,0 +1,352 @@
+[
+  {
+    "foodName": "Nougat Ice Cream",
+    "foodImage": "https://i.postimg.cc/vZB17DHD/b-saffron-and-nougat-ice-cream.jpg",
+    "foodCategory": "Dessert",
+    "foodQuantity": "1 scoop",
+    "availableQuantity": 50,
+    "tags": ["Ice Cream", "Dessert", "Sweet"],
+    "foodOrigin": "France",
+    "description": "Indulge in the creamy goodness of our Nougat Ice Cream, crafted with premium quality ingredients and infused with delicate nougat pieces. It's a delightful treat for any sweet tooth!",
+    "ingredients": ["Milk", "Cream", "Sugar", "Nougat Pieces"],
+    "makingProcedure": "Blend the milk, cream, and sugar until smooth. Fold in the nougat pieces gently. Freeze until set.",
+    "madeBy": "Chef Antoine",
+    "price": 5.99,
+    "rating": 4.8,
+    "purchaseNumber": 120,
+    "postedDate": "JAN 15, 2024",
+    "reacts": {
+      "thumbsUp": 95,
+      "heart": 25,
+      "laugh": 8
+    },
+    "author": {
+      "authorName": "Antoine Leblanc",
+      "authorEmail": "antoine@example.com",
+      "authorImg": "antoine.jpg"
+    }
+  },
+  {
+    "foodName": "Brazilian Burger",
+    "foodImage": "https://i.postimg.cc/MpFn9xv5/b-brazilian-burger-with-egg.jpg",
+    "foodCategory": "Main Course",
+    "foodQuantity": "1 burger",
+    "availableQuantity": 30,
+    "tags": ["Burger", "Brazilian", "Beef"],
+    "foodOrigin": "Brazil",
+    "description": "Experience the bold flavors of Brazil with our Brazilian Burger! Juicy beef patty topped with spicy chimichurri sauce, fresh avocado, and grilled pineapple, all served on a toasted brioche bun.",
+    "ingredients": [
+      "Beef Patty",
+      "Chimichurri Sauce",
+      "Avocado",
+      "Grilled Pineapple",
+      "Brioche Bun"
+    ],
+    "makingProcedure": "Grill the beef patty to perfection. Toast the brioche bun and assemble the burger with chimichurri sauce, avocado slices, and grilled pineapple.",
+    "madeBy": "Chef Carlos",
+    "price": 9.99,
+    "rating": 4.5,
+    "purchaseNumber": 80,
+    "postedDate": "FEB 22, 2024",
+    "reacts": {
+      "thumbsUp": 80,
+      "heart": 20,
+      "fire": 12
+    },
+    "author": {
+      "authorName": "Carlos Silva",
+      "authorEmail": "carlos@example.com",
+      "authorImg": "carlos.jpg"
+    }
+  },
+  {
+    "foodName": "Grilled Duck Breasts",
+    "foodImage": "https://i.postimg.cc/k5RBZZSm/home-1-blog-31.jpg",
+    "foodCategory": "Main Course",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 20,
+    "tags": ["Duck", "Grilled", "Main Course"],
+    "foodOrigin": "International",
+    "description": "Savor the succulent flavor of our Grilled Duck Breasts, seasoned with a special blend of herbs and spices. Each bite is tender, juicy, and bursting with rich, savory goodness.",
+    "ingredients": ["Duck Breasts", "Herbs", "Spices", "Salt", "Pepper"],
+    "makingProcedure": "Marinate the duck breasts with herbs, spices, salt, and pepper. Grill until cooked to your desired doneness.",
+    "madeBy": "Chef Isabella",
+    "price": 15.99,
+    "rating": 4.7,
+    "purchaseNumber": 50,
+    "postedDate": "MAR 07, 2024",
+    "reacts": {
+      "thumbsUp": 90,
+      "heart": 30,
+      "wow": 15
+    },
+    "author": {
+      "authorName": "Isabella Rossi",
+      "authorEmail": "isabella@example.com",
+      "authorImg": "isabella.jpg"
+    }
+  },
+  {
+    "foodName": "Shrimp Curry",
+    "foodImage": "https://i.postimg.cc/FK3nKC4b/single-food-5.jpg",
+    "foodCategory": "Main Course",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 25,
+    "tags": ["Shrimp", "Curry", "Spicy"],
+    "foodOrigin": "India",
+    "description": "Delight your taste buds with the aromatic flavors of our Shrimp Curry! Succulent shrimp simmered in a rich and fragrant curry sauce, served with steamed rice.",
+    "ingredients": ["Shrimp", "Curry Sauce", "Coconut Milk", "Spices", "Rice"],
+    "makingProcedure": "Cook the shrimp in the curry sauce with coconut milk and spices until tender. Serve hot with steamed rice.",
+    "madeBy": "Chef Raj",
+    "price": 12.99,
+    "rating": 4.6,
+    "purchaseNumber": 70,
+    "postedDate": "APR 12, 2024",
+    "reacts": {
+      "thumbsUp": 85,
+      "heart": 35,
+      "yum": 10
+    },
+    "author": {
+      "authorName": "Raj Patel",
+      "authorEmail": "raj@example.com",
+      "authorImg": "raj.jpg"
+    }
+  },
+  {
+    "foodName": "Chicken Doro Wat",
+    "foodImage": "https://i.postimg.cc/HkfhdDfs/single-food-6.jpg",
+    "foodCategory": "Main Course",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 40,
+    "tags": ["Chicken", "Ethiopian", "Spicy"],
+    "foodOrigin": "Ethiopia",
+    "description": "Transport yourself to the vibrant streets of Ethiopia with our Chicken Doro Wat! Tender chicken simmered in a fiery berbere sauce, served with injera bread.",
+    "ingredients": [
+      "Chicken",
+      "Berbere Sauce",
+      "Onions",
+      "Garlic",
+      "Ginger",
+      "Injera Bread"
+    ],
+    "makingProcedure": "Sauté onions, garlic, and ginger. Add chicken and berbere sauce, then simmer until cooked through. Serve hot with injera bread.",
+    "madeBy": "Chef Aida",
+    "price": 11.99,
+    "rating": 4.9,
+    "purchaseNumber": 100,
+    "postedDate": "MAY 18, 2024",
+    "reacts": {
+      "thumbsUp": 100,
+      "heart": 40,
+      "love": 20
+    },
+    "author": {
+      "authorName": "Aida Abate",
+      "authorEmail": "aida@example.com",
+      "authorImg": "aida.jpg"
+    }
+  },
+  {
+    "foodName": "Kung Pao Chicken",
+    "foodImage": "https://i.postimg.cc/MTYP7cXv/Wasabi-Wednesday.jpg",
+    "foodCategory": "Main Course",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 35,
+    "tags": ["Chicken", "Chinese", "Spicy"],
+    "foodOrigin": "China",
+    "description": "Satisfy your cravings with our classic Kung Pao Chicken! Tender chicken stir-fried with peanuts, vegetables, and spicy chili peppers, all coated in a savory and slightly sweet sauce. It's a timeless favorite with a perfect balance of flavors and textures.",
+    "ingredients": [
+      "Chicken",
+      "Peanuts",
+      "Vegetables",
+      "Chili Peppers",
+      "Soy Sauce",
+      "Vinegar",
+      "Sugar"
+    ],
+    "makingProcedure": "Marinate chicken with soy sauce and vinegar. Stir-fry with peanuts, vegetables, and chili peppers. Add the sauce and cook until thickened.",
+    "madeBy": "Chef Li",
+    "price": 10.99,
+    "rating": 4.8,
+    "purchaseNumber": 90,
+    "postedDate": "JUN 25, 2024",
+    "reacts": {
+      "thumbsUp": 95,
+      "heart": 45,
+      "spicy": 25
+    },
+    "author": {
+      "authorName": "Li Chen",
+      "authorEmail": "li@example.com",
+      "authorImg": "li.jpg"
+    }
+  },
+  {
+    "foodName": "Masala-Spiced Chickpeas",
+    "foodImage": "https://i.postimg.cc/J02Qxj84/single-food-1a.jpg",
+    "foodCategory": "Appetizer",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 60,
+    "tags": ["Chickpeas", "Spicy", "Appetizer"],
+    "foodOrigin": "India",
+    "description": "Experience the bold and aromatic flavors of India with our Masala-Spiced Chickpeas! Chickpeas simmered in a fragrant blend of spices, perfect as a snack or appetizer.",
+    "ingredients": [
+      "Chickpeas",
+      "Garam Masala",
+      "Turmeric",
+      "Cumin",
+      "Coriander",
+      "Garlic",
+      "Ginger"
+    ],
+    "makingProcedure": "Sauté garlic and ginger, then add spices and chickpeas. Cook until chickpeas are tender and infused with flavors.",
+    "madeBy": "Chef Priya",
+    "price": 7.99,
+    "rating": 4.6,
+    "purchaseNumber": 110,
+    "postedDate": "JUL 03, 2024",
+    "reacts": {
+      "thumbsUp": 85,
+      "heart": 30,
+      "wow": 15
+    },
+    "author": {
+      "authorName": "Priya Sharma",
+      "authorEmail": "priya@example.com",
+      "authorImg": "priya.jpg"
+    }
+  },
+  {
+    "foodName": "Kung Pao Pastami",
+    "foodImage": "https://i.postimg.cc/tRSD9G6Q/single-food-2a.jpg",
+    "foodCategory": "Main Course",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 25,
+    "tags": ["Pastami", "Chinese", "Spicy"],
+    "foodOrigin": "China",
+    "description": "A fusion twist on a classic dish, our Kung Pao Pastami features tender pastami stir-fried with peanuts, vegetables, and spicy chili peppers, all tossed in a flavorful sauce.",
+    "ingredients": [
+      "Pastami",
+      "Peanuts",
+      "Vegetables",
+      "Chili Peppers",
+      "Soy Sauce",
+      "Vinegar",
+      "Sugar"
+    ],
+    "makingProcedure": "Marinate pastami with soy sauce and vinegar. Stir-fry with peanuts, vegetables, and chili peppers. Add the sauce and cook until thickened.",
+    "madeBy": "Chef Mei",
+    "price": 13.99,
+    "rating": 4.7,
+    "purchaseNumber": 75,
+    "postedDate": "AUG 09, 2024",
+    "reacts": {
+      "thumbsUp": 90,
+      "heart": 35,
+      "spicy": 20
+    },
+    "author": {
+      "authorName": "Mei Lin",
+      "authorEmail": "mei@example.com",
+      "authorImg": "mei.jpg"
+    }
+  },
+  {
+    "foodName": "Jalapeno-Mango Salsa",
+    "foodImage": "https://i.postimg.cc/4dG2HvfD/single-food-31.jpg",
+    "foodCategory": "Appetizer",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 40,
+    "tags": ["Salsa", "Spicy", "Mango"],
+    "foodOrigin": "Mexico",
+    "description": "Add a burst of flavor to your chips or tacos with our Jalapeno-Mango Salsa! Fresh mangoes, jalapenos, onions, and cilantro come together in this vibrant and zesty salsa.",
+    "ingredients": [
+      "Mangoes",
+      "Jalapenos",
+      "Onions",
+      "Cilantro",
+      "Lime Juice",
+      "Salt",
+      "Pepper"
+    ],
+    "makingProcedure": "Dice mangoes, jalapenos, and onions. Mix with chopped cilantro, lime juice, salt, and pepper. Chill before serving.",
+    "madeBy": "Chef Diego",
+    "price": 6.99,
+    "rating": 4.9,
+    "purchaseNumber": 95,
+    "postedDate": "SEP 16, 2024",
+    "reacts": {
+      "thumbsUp": 100,
+      "heart": 50,
+      "love": 30
+    },
+    "author": {
+      "authorName": "Diego Hernandez",
+      "authorEmail": "diego@example.com",
+      "authorImg": "diego.jpg"
+    }
+  },
+  {
+    "foodName": "Spicy Fried Rice & Bacon",
+    "foodImage": "https://i.postimg.cc/4N202hPc/single-food-4.jpg",
+    "foodCategory": "Main Course",
+    "foodQuantity": "1 serving",
+    "availableQuantity": 45,
+    "tags": ["Fried Rice", "Spicy", "Bacon"],
+    "foodOrigin": "International",
+    "description": "Indulge in the ultimate comfort food with our Spicy Fried Rice & Bacon! Flavorful rice stir-fried with crispy bacon, vegetables, and a kick of spice.",
+    "ingredients": [
+      "Rice",
+      "Bacon",
+      "Vegetables",
+      "Eggs",
+      "Soy Sauce",
+      "Chili Sauce",
+      "Garlic"
+    ],
+    "makingProcedure": "Cook bacon until crispy, then stir-fry with vegetables, garlic, and cooked rice. Add eggs and sauces, and cook until heated through.",
+    "madeBy": "Chef Michael",
+    "price": 8.99,
+    "rating": 4.7,
+    "purchaseNumber": 85,
+    "postedDate": "OCT 21, 2024",
+    "reacts": {
+      "thumbsUp": 95,
+      "heart": 40,
+      "yum": 20
+    },
+    "author": {
+      "authorName": "Michael Johnson",
+      "authorEmail": "michael@example.com",
+      "authorImg": "michael.jpg"
+    }
+  },
+  {
+    "foodName": "Mango-Chile Chutney",
+    "foodImage": "https://i.postimg.cc/0jQf7cLB/Mango-Chile-Chutney.jpg",
+    "foodCategory": "Condiment",
+    "foodQuantity": "1 jar",
+    "availableQuantity": 55,
+    "tags": ["Chutney", "Mango", "Spicy"],
+    "foodOrigin": "India",
+    "description": "Add a touch of sweetness and spice to your dishes with our Mango-Chile Chutney! Bursting with the tropical sweetness of ripe mangoes and the fiery heat of chilies, this chutney is the perfect accompaniment to grilled meats, sandwiches, or cheese platters.",
+    "ingredients": ["Mangoes", "Chilies", "Vinegar", "Sugar", "Spices"],
+    "makingProcedure": "Simmer mangoes, chilies, vinegar, sugar, and spices until thickened. Blend until smooth and let it cool before serving.",
+    "madeBy": "Chef Ravi",
+    "price": 5.49,
+    "rating": 4.6,
+    "purchaseNumber": 75,
+    "postedDate": "OCT 21, 2024",
+    "reacts": {
+      "thumbsUp": 90,
+      "heart": 35,
+      "yum": 15
+    },
+    "author": {
+      "authorName": "Ravi Patel",
+      "authorEmail": "ravi@example.com",
+      "authorImg": "ravi.jpg"
+    }
+  }
+]
