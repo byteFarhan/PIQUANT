@@ -8,9 +8,7 @@ const TestimonialItem = ({ name, description }) => {
         // className="bg-no-repeat bg-cover py-28"
         // style={{ backgroundImage: `url(${testimonialBg})` }}
       >
-        <p className="w-full mx-auto text-center text-white lg:w-2/3">
-          {description}
-        </p>
+        <p className="w-2/3 mx-auto text-center text-white">{description}</p>
 
         <div className="text-center">
           <div className="rating">

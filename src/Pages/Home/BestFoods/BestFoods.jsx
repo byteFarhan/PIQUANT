@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BestFood from "./BestFood/BestFood";
 
 const BestFoods = () => {
@@ -20,9 +21,11 @@ const BestFoods = () => {
         <BestFood />
       </div>
       <div className="mt-6 text-center lg:mt-10">
-        <button className="px-5 py-3 btn-base btn-secondary">
-          See All Foods
-        </button>
+        <Link to={`all-foods`}>
+          <button className="px-5 py-3 btn-base btn-secondary">
+            See All Foods
+          </button>
+        </Link>
       </div>
     </section>
   );

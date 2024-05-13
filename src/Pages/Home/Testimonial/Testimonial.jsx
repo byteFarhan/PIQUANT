@@ -9,10 +9,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import testimonialBg from "../../../assets/new-parallax-2.jpg";
 import testimonialIcon from "../../../assets/testimonials-icon.png";
-// import "./styles.css";
+import "./styles.css";
 
 // import required modules
-import { EffectFade } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 // import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import TestimonialItem from "./TestimonialItem/TestimonialItem";
 import SwiperNavButtons from "./SwiperNavButtons/SwiperNavButtons";
@@ -41,7 +41,11 @@ const Testimonial = () => {
             //   pagination={{
             //     clickable: true,
             //   }}
-            modules={[EffectFade]}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            modules={[EffectFade, Autoplay]}
             className="mySwiper"
           >
             <SwiperSlide>

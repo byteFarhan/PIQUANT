@@ -1,4 +1,5 @@
-import { BsCalendarDate, BsCalendarDateFill } from "react-icons/bs";
+import toast from "react-hot-toast";
+import { BsCalendarDateFill } from "react-icons/bs";
 import { FaHandPointRight } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
@@ -12,6 +13,7 @@ const BookATable = () => {
   //   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    toast("This feature is under development.");
     // console.log(e.target);
   };
   //   const handleSelect = (e) => {
