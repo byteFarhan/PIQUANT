@@ -24,7 +24,8 @@
       "authorName": "Antoine Leblanc",
       "authorEmail": "antoine@example.com",
       "authorImg": "antoine.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Brazilian Burger",
@@ -57,7 +58,8 @@
       "authorName": "Carlos Silva",
       "authorEmail": "carlos@example.com",
       "authorImg": "carlos.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Grilled Duck Breasts",
@@ -84,7 +86,8 @@
       "authorName": "Isabella Rossi",
       "authorEmail": "isabella@example.com",
       "authorImg": "isabella.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Shrimp Curry",
@@ -111,7 +114,8 @@
       "authorName": "Raj Patel",
       "authorEmail": "raj@example.com",
       "authorImg": "raj.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Chicken Doro Wat",
@@ -145,7 +149,8 @@
       "authorName": "Aida Abate",
       "authorEmail": "aida@example.com",
       "authorImg": "aida.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Kung Pao Chicken",
@@ -180,7 +185,8 @@
       "authorName": "Li Chen",
       "authorEmail": "li@example.com",
       "authorImg": "li.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Masala-Spiced Chickpeas",
@@ -215,7 +221,8 @@
       "authorName": "Priya Sharma",
       "authorEmail": "priya@example.com",
       "authorImg": "priya.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Kung Pao Pastami",
@@ -250,7 +257,8 @@
       "authorName": "Mei Lin",
       "authorEmail": "mei@example.com",
       "authorImg": "mei.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Jalapeno-Mango Salsa",
@@ -285,7 +293,8 @@
       "authorName": "Diego Hernandez",
       "authorEmail": "diego@example.com",
       "authorImg": "diego.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Spicy Fried Rice & Bacon",
@@ -320,7 +329,8 @@
       "authorName": "Michael Johnson",
       "authorEmail": "michael@example.com",
       "authorImg": "michael.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   },
   {
     "foodName": "Mango-Chile Chutney",
@@ -347,6 +357,7 @@
       "authorName": "Ravi Patel",
       "authorEmail": "ravi@example.com",
       "authorImg": "ravi.jpg"
-    }
+    },
+    "numberOfPurchases": 0
   }
 ]

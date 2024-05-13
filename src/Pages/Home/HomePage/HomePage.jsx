@@ -4,12 +4,9 @@ import BookATable from "../BookATable/BookATable";
 import Awards from "../Awards/Awards";
 import Testimonial from "../Testimonial/Testimonial";
 import BestFoods from "../BestFoods/BestFoods";
-import useCurrentDateFormatted from "../../../Hooks/useCurrentDateFormatted";
 // import Test from "../Testimonial/Test";
 
 const HomePage = () => {
-  const currentDate = useCurrentDateFormatted();
-  console.log(currentDate);
   return (
     <section>
       <section

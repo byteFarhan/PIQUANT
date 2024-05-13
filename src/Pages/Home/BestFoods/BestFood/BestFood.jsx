@@ -1,11 +1,14 @@
+import PropTypes from "prop-types";
 import { BsCalendar2Date } from "react-icons/bs";
-import img from "../../../../assets/single-food-1a.jpg";
-const BestFood = () => {
+import { Link } from "react-router-dom";
+// import img from "../../../../assets/single-food-1a.jpg";
+const BestFood = ({ food }) => {
+  const { _id, foodName, foodImage, price, postedDate, description } = food;
   return (
     <div className="">
       <div
         className="h-[300px] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(${img})` }}
+        style={{ backgroundImage: `url(${foodImage})` }}
       >
         {/* <img
           src={img}
@@ -16,21 +19,19 @@ const BestFood = () => {
       </div>
       <div className="p-6 space-y-4 border-b-2 border-x-2 border-secondary">
         <p className="flex items-center gap-2">
-          <BsCalendar2Date /> NOV 04, 2015
+          <BsCalendar2Date /> {postedDate}
         </p>
         <div className="flex items-start justify-between">
-          <h3 className="text-xl">NOUGAT ICE CREAM</h3>
-          <p className="text-lg font-medium">Pirce: ${`59`}</p>
+          <h3 className="text-xl">{foodName}</h3>
+          <p className="text-lg font-medium">Pirce: ${price}</p>
         </div>
-        <p>
-          Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque
-          at tellus felis. Sed fringilla, tellus non congue porttitor, dui eros
-          fauci...
-        </p>
+        <p>{description?.substring(0, 70 - 3) + "..."}</p>
         <div>
-          <button className="btn-base btn-outline px-4 py-2.5">
-            View Details
-          </button>
+          <Link to={`/food/${_id}`}>
+            <button className="btn-base btn-outline px-4 py-2.5">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -38,3 +39,6 @@ const BestFood = () => {
 };
 
 export default BestFood;
+BestFood.propTypes = {
+  food: PropTypes.object.isRequired,
+};
