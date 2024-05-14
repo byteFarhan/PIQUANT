@@ -1,0 +1,50 @@
+[
+  {
+    "foodImage": "https://i.postimg.cc/1RBCTkV8/Shrimp-Curry.jpg",
+    "userReview": "Absolutely delicious! The flavors were incredible and the ingredients were fresh. Highly recommend!",
+    "author": {
+      "userName": "John Doe",
+      "userEmail": "john.doe@example.com"
+    }
+  },
+  {
+    "foodImage": "https://i.postimg.cc/prssFjMf/Carne-Adovada.jpg",
+    "userReview": "The food was cooked perfectly and the portions were generous. A great dining experience!",
+    "author": {
+      "userName": "Jane Smith",
+      "userEmail": "jane.smith@example.com"
+    }
+  },
+  {
+    "foodImage": "https://i.postimg.cc/TYP7XtnC/Hibachi-Salmon.jpg",
+    "userReview": "Everything was cooked to perfection. The service was friendly and attentive. Will definitely be back!",
+    "author": {
+      "userName": "Michael Williams",
+      "userEmail": "michael.williams@example.com"
+    }
+  },
+  {
+    "foodImage": "https://i.postimg.cc/LXBCm7y0/Wasabi-Wednesday.jpg",
+    "userReview": "The presentation was beautiful and the taste was even better. A truly memorable meal.",
+    "author": {
+      "userName": "Sarah Jones",
+      "userEmail": "sarah.jones@example.com"
+    }
+  },
+  {
+    "foodImage": "https://i.postimg.cc/prssFjMf/Carne-Adovada.jpg",
+    "userReview": "Fresh ingredients, delicious flavors, and a fantastic atmosphere. Highly recommend!",
+    "author": {
+      "userName": "David Miller",
+      "userEmail": "david.miller@example.com"
+    }
+  },
+  {
+    "foodImage": "https://i.postimg.cc/4N202hPc/single-food-4.jpg",
+    "userReview": "This place never disappoints! The food is consistently delicious and the service is top-notch.",
+    "author": {
+      "userName": "Emily Brown",
+      "userEmail": "emily.brown@example.com"
+    }
+  }
+]

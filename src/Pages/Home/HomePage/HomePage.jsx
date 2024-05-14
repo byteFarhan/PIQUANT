@@ -4,9 +4,16 @@ import BookATable from "../BookATable/BookATable";
 import Awards from "../Awards/Awards";
 import Testimonial from "../Testimonial/Testimonial";
 import BestFoods from "../BestFoods/BestFoods";
+import GallaryCard from "../../Gallary/GallaryCard/GallaryCard";
 // import Test from "../Testimonial/Test";
 
 const HomePage = () => {
+  const rI = {
+    imageUrl: bannerBg,
+    userReview:
+      "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ",
+    userName: "Farhan Mazumder",
+  };
   return (
     <section>
       <section
@@ -18,6 +25,7 @@ const HomePage = () => {
       <BookATable />
       <BestFoods />
       <Testimonial />
+      <GallaryCard reviewItem={rI} />
       {/* <Test /> */}
       <Awards />
     </section>
