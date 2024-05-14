@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/gallary",
         element: <Gallary />,
-        loader: () => fetch(`${import.meta.env.VITE_BASE_URL}/review-gallary`),
+        loader: () => fetch(`${import.meta.env.VITE_BASE_URL}/reviews`),
       },
       {
         path: "/add-food",

@@ -4,7 +4,7 @@ const GallaryCard = ({ reviewItem }) => {
   const { foodImage, author, userReview } = reviewItem;
 
   return (
-    <div className="relative">
+    <div className="relative h-[320px]">
       <img
         src={foodImage}
         alt="Image"
