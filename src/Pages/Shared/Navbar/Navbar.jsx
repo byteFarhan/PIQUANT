@@ -112,6 +112,16 @@ const Navbar = () => {
                   >
                     Gallary
                   </NavLink>
+                  <NavLink
+                    to={`/add-food`}
+                    className={({ isActive, isPending }) =>
+                      `nav-item ${
+                        isPending ? "" : isActive ? "bg-gray-200" : ""
+                      }`
+                    }
+                  >
+                    Add Food
+                  </NavLink>
                   {!user && navItems}
                 </ul>
 
@@ -135,6 +145,7 @@ const Navbar = () => {
                               src={user?.photoURL}
                               className="object-cover w-full h-full"
                               alt="avatar"
+                              referrerPolicy="no-referrer"
                             />
                           </div>
                         </div>

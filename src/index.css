@@ -33,6 +33,9 @@
   .btn-outline {
     @apply bg-transparent border-2 border-secondary hover:bg-secondary hover:text-white;
   }
+  .input-field {
+    @apply block w-full p-2 bg-white border rounded-none text-secondary focus:ring-2 ring-opacity-60 focus:outline-none ring-2 ring-secondary focus:ring-secondary;
+  }
 }
 
 * {

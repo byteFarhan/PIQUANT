@@ -6,6 +6,7 @@ import Registation from "../Pages/Registation/Registation";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import FoodDetails from "../Pages/FoodDetails/FoodDetails";
 import AllFoods from "../Pages/AllFoods/AllFoods";
+import AddFood from "../Pages/AddFood/AddFood";
 // import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 // const axiosSecure = useAxiosSecure();
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         path: "/all-foods",
         element: <AllFoods />,
         loader: () => fetch(`${import.meta.env.VITE_BASE_URL}/foods`),
+      },
+      {
+        path: "/add-food",
+        element: <AddFood />,
       },
       {
         path: "registation",
