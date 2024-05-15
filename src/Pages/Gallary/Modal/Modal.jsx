@@ -14,6 +14,7 @@ const Modal = ({ reviews, setReviews }) => {
     if (!user) {
       toast.error("You have to sign in your account!");
       navigate("/login");
+      return;
     }
     const form = e.target;
     // console.log(form);
@@ -88,12 +89,12 @@ const Modal = ({ reviews, setReviews }) => {
                 <input
                   type="submit"
                   value="Add"
-                  className="btn-base w-full btn-primary px-3.5 py-2.5"
+                  className="btn-base w-full cursor-pointer btn-primary px-3.5 py-2.5"
                 />
               </div>
             </form>
             <form method="dialog" className="absolute -top-4 -right-3">
-              <button className="text-white border-none btn btn-circle hover:bg-secondary bg-secondary">
+              <button className="text-white border-none cursor-pointer btn btn-circle hover:bg-secondary bg-secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"

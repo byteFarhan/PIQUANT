@@ -12,6 +12,7 @@ import PurchaseFood from "../Pages/PurchaseFood/PurchaseFood";
 import MyPurchase from "../Pages/MyPurchase/MyPurchase";
 import MyFoods from "../Pages/MyFoods/MyFoods";
 import UpdateFood from "../Pages/UpdateFood/UpdateFood";
+import PrivetRoute from "./PrivetRoute/PrivetRoute";
 // import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 // const axiosSecure = useAxiosSecure();
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "food/:id",
-        element: <FoodDetails />,
+        element: (
+          <PrivetRoute>
+            <FoodDetails />
+          </PrivetRoute>
+        ),
         loader: ({ params }) => {
           return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params.id}`);
         },
@@ -45,29 +50,49 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-food",
-        element: <AddFood />,
+        element: (
+          <PrivetRoute>
+            <AddFood />
+          </PrivetRoute>
+        ),
       },
       {
         path: "/update/food/:id",
-        element: <UpdateFood />,
+        element: (
+          <PrivetRoute>
+            <UpdateFood />
+          </PrivetRoute>
+        ),
         loader: ({ params }) => {
           return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params.id}`);
         },
       },
       {
         path: "/purchase/food/:id",
-        element: <PurchaseFood />,
+        element: (
+          <PrivetRoute>
+            <PurchaseFood />
+          </PrivetRoute>
+        ),
         loader: ({ params }) => {
           return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params?.id}`);
         },
       },
       {
         path: "/my-purchase",
-        element: <MyPurchase />,
+        element: (
+          <PrivetRoute>
+            <MyPurchase />
+          </PrivetRoute>
+        ),
       },
       {
         path: "/my-foods",
-        element: <MyFoods />,
+        element: (
+          <PrivetRoute>
+            <MyFoods />
+          </PrivetRoute>
+        ),
       },
       {
         path: "registation",
