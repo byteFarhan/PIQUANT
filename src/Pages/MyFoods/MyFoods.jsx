@@ -4,6 +4,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import sectionBg from "../../assets/pattern-2.png";
 
 import PageTitle from "../Shared/PageTitle/PageTitle";
+import TableB from "./TableB/TableB";
 
 const MyFoods = () => {
   const axiosSecure = useAxiosSecure();
@@ -28,7 +29,9 @@ const MyFoods = () => {
         className="px-5 py-16 md:py-20 md:px-8 lg:px-0 lg:py-32"
       >
         <section className="mx-auto max-w-7xl">
-          <div className=""></div>
+          <div className="">
+            <TableB />
+          </div>
         </section>
       </section>
     </section>
