@@ -11,9 +11,6 @@ const MyPurchase = () => {
         className="px-5 py-16 md:py-20 md:px-8 lg:px-0 lg:py-32"
       >
         <section className="mx-auto bg-white max-w-7xl"></section>
-        <div className="p-6 md:p-8 lg:p-16">
-          <Table />
-        </div>
       </section>
     </section>
   );
