@@ -105,7 +105,7 @@ const FoodDetails = () => {
                     </p>
                   </div>
                 </div>
-                <Link>
+                <Link to={`/purchase/food/${_id}`}>
                   <button className="px-5 py-3 mt-6 uppercase btn-base btn-secondary">
                     Purchase Food
                   </button>

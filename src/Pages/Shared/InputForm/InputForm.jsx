@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { useForm } from "react-hook-form";
 
 const InputForm = ({
   taitle,
@@ -28,7 +27,7 @@ const InputForm = ({
         </div>
         <form
           onSubmit={handleSubmit(submitFunc)}
-          className="space-y-5 md:px-10"
+          className="space-y-4 md:px-10"
         >
           {/* row-1 */}
           <div className="flex flex-col gap-5 lg:flex-row">

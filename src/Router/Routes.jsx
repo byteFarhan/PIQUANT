@@ -8,6 +8,7 @@ import FoodDetails from "../Pages/FoodDetails/FoodDetails";
 import AllFoods from "../Pages/AllFoods/AllFoods";
 import AddFood from "../Pages/AddFood/AddFood";
 import Gallary from "../Pages/Gallary/Gallary";
+import PurchaseFood from "../Pages/PurchaseFood/PurchaseFood";
 // import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 // const axiosSecure = useAxiosSecure();
@@ -42,6 +43,13 @@ const router = createBrowserRouter([
       {
         path: "/add-food",
         element: <AddFood />,
+      },
+      {
+        path: "/purchase/food/:id",
+        element: <PurchaseFood />,
+        loader: ({ params }) => {
+          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params?.id}`);
+        },
       },
       {
         path: "registation",

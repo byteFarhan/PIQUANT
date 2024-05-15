@@ -15,7 +15,7 @@ const BestFood = ({ food }) => {
           alt=""
           className="h-[250px] object-cover w-auto cursor-pointer"
         /> */}
-        <div className="transition-all duration-150 ease-in-out delay-150 hover:bg-gradient-to-l from-[#00000066] size-full cursor-pointer"></div>
+        <div className="transition-all delay-300 ease-in-out hover:bg-gradient-to-l from-[#00000066] size-full cursor-pointer"></div>
       </div>
       <div className="p-6 space-y-4 border-b-2 border-x-2 border-secondary">
         <p className="flex items-center gap-2">
