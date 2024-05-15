@@ -1,5 +1,3 @@
-import React from "react";
-
 const useCurrentDateFormatted = () => {
   // Create a new Date object to get the current date
   const currentDate = new Date();

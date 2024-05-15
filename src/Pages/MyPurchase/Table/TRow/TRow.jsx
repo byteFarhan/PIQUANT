@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 
-const TRow = ({ rowData }) => {
-  const { foodName, foodImage, price, quantity, buyingDate, foodAuthor, slug } =
-    rowData;
+const TRow = ({ rowData, handleDelete }) => {
+  const {
+    foodName,
+    foodImage,
+    price,
+    quantity,
+    buyingDate,
+    foodAuthor,
+    slug,
+    _id,
+  } = rowData;
+
   return (
     <>
       <tr>
@@ -36,7 +45,10 @@ const TRow = ({ rowData }) => {
         </td>
         <td className="px-4 py-4 text-sm whitespace-nowrap">
           <div className="flex items-center gap-x-6">
-            <button className="text-gray-500 transition-colors duration-200 dark:hover:text-red-500 dark:text-gray-300 hover:text-red-500 focus:outline-none">
+            <button
+              onClick={() => handleDelete(_id)}
+              className="text-gray-500 transition-colors duration-200 dark:hover:text-red-500 dark:text-gray-300 hover:text-red-500 focus:outline-none"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

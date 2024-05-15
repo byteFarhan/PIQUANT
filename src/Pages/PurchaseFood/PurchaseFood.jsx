@@ -65,6 +65,7 @@ const PurchaseFood = () => {
         // console.log(res.data);
         if (res.data.acknowledged) {
           toast.success("You sucessfully purchased the food.");
+          navigate("/my-purchase");
           reset();
           const PurchaseInfo = {
             productId: food?._id,

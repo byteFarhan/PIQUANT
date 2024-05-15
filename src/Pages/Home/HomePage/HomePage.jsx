@@ -4,8 +4,6 @@ import BookATable from "../BookATable/BookATable";
 import Awards from "../Awards/Awards";
 import Testimonial from "../Testimonial/Testimonial";
 import BestFoods from "../BestFoods/BestFoods";
-import GallaryCard from "../../Gallary/GallaryCard/GallaryCard";
-// import Test from "../Testimonial/Test";
 
 const HomePage = () => {
   return (

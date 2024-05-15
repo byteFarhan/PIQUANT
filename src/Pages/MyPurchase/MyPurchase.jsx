@@ -31,7 +31,7 @@ const MyPurchase = () => {
         <div className="p-6 md:p-8 lg:p-16">
           {purchases?.length > 0 ? (
             <>
-              <Table purchases={purchases} />
+              <Table purchases={purchases} setPurchases={setPurchases} />
             </>
           ) : (
             <div className="flex items-center justify-center h-96">

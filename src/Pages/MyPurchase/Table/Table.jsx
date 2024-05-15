@@ -1,6 +1,29 @@
+import toast from "react-hot-toast";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import TRow from "./TRow/TRow";
 
 const Table = ({ setPurchases, purchases }) => {
+  const axiosSecure = useAxiosSecure();
+
+  const handleDelete = (id) => {
+    // console.log(id);
+    axiosSecure
+      .delete(`/purchases/${id}`)
+      .then((res) => {
+        // console.log(res.data);
+        if (res.data.deletedCount) {
+          toast.success("Your purchase has been canceled.");
+          const remainingPurchases = purchases.filter(
+            (item) => item._id !== id
+          );
+          console.log(remainingPurchases);
+          setPurchases(remainingPurchases);
+        }
+      })
+      .catch((error) => {
+        // console.log(error);
+      });
+  };
   return (
     <>
       <section className="container px-4 mx-auto">
@@ -61,7 +84,11 @@ const Table = ({ setPurchases, purchases }) => {
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                     {purchases?.map((item) => (
-                      <TRow key={item._id} rowData={item} />
+                      <TRow
+                        key={item._id}
+                        rowData={item}
+                        handleDelete={handleDelete}
+                      />
                     ))}
                   </tbody>
                 </table>
