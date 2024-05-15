@@ -31,7 +31,7 @@ const FoodDetails = () => {
     numberOfPurchases,
   } = food;
   //   console.log(reacts);
-  console.log(ingredients);
+  //   console.log(ingredients);
   return (
     <section>
       <PageTitle pageTitle={foodName} />

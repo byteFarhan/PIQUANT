@@ -13,7 +13,7 @@ const AllFoods = () => {
   useEffect(() => {
     setLoadedFoods(allFoods);
   }, [allFoods]);
-  console.log(loadedFoods);
+  //   console.log(loadedFoods);
   const handleSearch = (e) => {
     e.preventDefault();
     const form = e.target;
