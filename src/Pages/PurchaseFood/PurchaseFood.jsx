@@ -24,12 +24,27 @@ const PurchaseFood = () => {
 
   const handlePurchase = (data) => {
     // console.log(data);
+    const { foodName, buyerName, price, quantity } = data;
     if (food?.author?.authorEmail === user?.email) {
       toast.error("You can't buy your own added food!");
       navigate("/");
       return;
+    } else if (!food?.availableQuantity) {
+      toast.error("The food is not available!");
+      reset();
+      navigate("/");
+      return;
+    } else if (
+      food?.availableQuantity &&
+      food?.availableQuantity < parseInt(quantity)
+    ) {
+      toast.error(
+        `The food availability is only ${food?.availableQuantity} units.`
+      );
+      reset();
+      return;
     }
-    const { foodName, buyerName, price, quantity } = data;
+
     const purchasedFood = {
       foodName,
       price: parseFloat(price),
@@ -137,7 +152,7 @@ const PurchaseFood = () => {
                 <input
                   type="number"
                   min={1}
-                  max={5}
+                  //   max={5}
                   placeholder="Quantity you needed"
                   className="input-field"
                   {...register("quantity", { required: true })}
