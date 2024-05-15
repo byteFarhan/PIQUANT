@@ -5,11 +5,10 @@ const TableRow = ({ rowData, handleDelete, handleUpdate }) => {
     foodName,
     foodImage,
     price,
-    quantity,
-    buyingDate,
-    foodAuthor,
-
+    postedDate,
+    foodOrigin,
     _id,
+    foodCategory,
   } = rowData;
   return (
     <>
@@ -31,16 +30,16 @@ const TableRow = ({ rowData, handleDelete, handleUpdate }) => {
           </div>
         </td>
         <td className="px-12 py-4 text-sm font-normal text-gray-700 whitespace-nowrap">
-          <span className="pl-3 lg:pl-5">{quantity}</span>
+          {foodCategory}
         </td>
         <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-          {buyingDate}
+          {postedDate}
         </td>
         <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
           ${price}
         </td>
         <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-          {foodAuthor?.authorName}
+          {foodOrigin}
         </td>
         <td className="px-4 py-4 text-sm whitespace-nowrap">
           <div className="flex items-center gap-x-6">

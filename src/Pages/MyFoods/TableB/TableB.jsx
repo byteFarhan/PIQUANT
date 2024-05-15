@@ -1,4 +1,6 @@
-const TableB = ({ setFoods, foods }) => {
+import TableRow from "./TableRow/TableRow";
+
+const TableB = ({ setMyFoods, myFoods }) => {
   return (
     <>
       <section className="container px-4 mx-auto">
@@ -57,7 +59,15 @@ const TableB = ({ setFoods, foods }) => {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900"></tbody>
+                  <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                    {myFoods?.map((food) => (
+                      <TableRow
+                        key={food._id}
+                        rowData={food}
+                        // handleDelete={handleDelete}
+                      />
+                    ))}
+                  </tbody>
                 </table>
               </div>
             </div>

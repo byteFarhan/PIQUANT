@@ -20,7 +20,7 @@ const MyFoods = () => {
         console.log(error);
       });
   }, [axiosSecure, user]);
-  console.log(myFoods);
+  // console.log(myFoods);
   return (
     <section>
       <PageTitle pageTitle={`Your Added Foods`} />
@@ -30,7 +30,7 @@ const MyFoods = () => {
       >
         <section className="mx-auto max-w-7xl">
           <div className="">
-            <TableB />
+            <TableB myFoods={myFoods} setMyFoods={setMyFoods} />
           </div>
         </section>
       </section>
