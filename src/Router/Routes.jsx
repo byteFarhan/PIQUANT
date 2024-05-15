@@ -11,6 +11,7 @@ import Gallary from "../Pages/Gallary/Gallary";
 import PurchaseFood from "../Pages/PurchaseFood/PurchaseFood";
 import MyPurchase from "../Pages/MyPurchase/MyPurchase";
 import MyFoods from "../Pages/MyFoods/MyFoods";
+import UpdateFood from "../Pages/UpdateFood/UpdateFood";
 // import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 // const axiosSecure = useAxiosSecure();
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/add-food",
         element: <AddFood />,
+      },
+      {
+        path: "/update/food/:id",
+        element: <UpdateFood />,
       },
       {
         path: "/purchase/food/:id",
