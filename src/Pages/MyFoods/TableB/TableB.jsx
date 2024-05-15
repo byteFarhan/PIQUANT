@@ -1,6 +1,25 @@
+import toast from "react-hot-toast";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import TableRow from "./TableRow/TableRow";
 
 const TableB = ({ setMyFoods, myFoods }) => {
+  const axiosSecure = useAxiosSecure();
+  const handleDelete = (id) => {
+    console.log(id);
+    axiosSecure
+      .delete(`/foods/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.deletedCount) {
+          toast.success("The food has been deleted successfully.");
+          const remainingFoods = myFoods.filter((food) => food._id !== id);
+          setMyFoods(remainingFoods);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <>
       <section className="container px-4 mx-auto">
@@ -64,7 +83,7 @@ const TableB = ({ setMyFoods, myFoods }) => {
                       <TableRow
                         key={food._id}
                         rowData={food}
-                        // handleDelete={handleDelete}
+                        handleDelete={handleDelete}
                       />
                     ))}
                   </tbody>

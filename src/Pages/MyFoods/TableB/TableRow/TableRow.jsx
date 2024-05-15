@@ -62,7 +62,10 @@ const TableRow = ({ rowData, handleDelete, handleUpdate }) => {
                 />
               </svg>
             </button>
-            <button className="text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500 dark:text-gray-300 hover:text-yellow-500 focus:outline-none">
+            <button
+              onClick={() => handleUpdate(_id)}
+              className="text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500 dark:text-gray-300 hover:text-yellow-500 focus:outline-none"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

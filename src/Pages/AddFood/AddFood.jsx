@@ -6,7 +6,9 @@ import useAuth from "../../Hooks/useAuth";
 import useCurrentDateFormatted from "../../Hooks/useCurrentDateFormatted";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const AddFood = () => {
+  const navigate = useNavigate();
   const { user } = useAuth();
   const currentDate = useCurrentDateFormatted();
   const hookFormItems = useForm();
@@ -63,6 +65,7 @@ const AddFood = () => {
         if (res.data.acknowledged) {
           toast.success("The food has been added successfully.");
           reset();
+          navigate("/my-foods");
         }
       })
       .catch((error) => {
@@ -71,7 +74,7 @@ const AddFood = () => {
   };
   return (
     <section>
-      <PageTitle pageTitle={"Add A Food"} />
+      <PageTitle pageTitle={"Add New Food"} />
       <section
         style={{ backgroundImage: `url(${sectionBg})` }}
         className="px-5 py-16 md:px-10 md:py-20 lg:py-32"
