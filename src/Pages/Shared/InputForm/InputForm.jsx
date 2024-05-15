@@ -221,12 +221,12 @@ const InputForm = ({
   );
 };
 
-InputForm.propTypes = {
-  taitle: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  submitText: PropTypes.string.isRequired,
-  submitFunc: PropTypes.func.isRequired,
-  food: PropTypes.object,
-  formFunctions: PropTypes.object,
-};
+// InputForm.propTypes = {
+//   taitle: PropTypes.string.isRequired,
+//   description: PropTypes.string,
+//   submitText: PropTypes.string.isRequired,
+//   submitFunc: PropTypes.func.isRequired,
+//   food: PropTypes.object,
+//   formFunctions: PropTypes.object,
+// };
 export default InputForm;
