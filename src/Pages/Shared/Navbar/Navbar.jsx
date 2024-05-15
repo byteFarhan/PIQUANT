@@ -23,22 +23,8 @@ const Navbar = () => {
 
   const navItems = (
     <>
-      {/* <NavLink
-        to={`/registation`}
-        className={({ isActive, isPending }) =>
-          `nav-item ${isPending ? "" : isActive ? "bg-gray-200" : ""}`
-        }
-      >
-        Registation
-      </NavLink> */}
-      <NavLink
-        to={`/login`}
-        className={({ isActive, isPending }) =>
-          `nav-item ${isPending ? "" : isActive ? "bg-gray-200" : ""}`
-        }
-      >
-        Login
-      </NavLink>
+      {/* <NavItem routeName={"Registation"} routePath={"/registation"} /> */}
+      <NavItem routeName={"Login"} routePath={"/login"} />
     </>
   );
   const [isOpen, setIsOpen] = useState(false);
@@ -83,52 +69,14 @@ const Navbar = () => {
                 } absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center`}
               >
                 <ul className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-                  {/* <NavLink
-                    to={`/`}
-                    className={({ isActive, isPending }) =>
-                      `nav-item ${
-                        isPending ? "" : isActive ? "bg-gray-200" : ""
-                      }`
-                    }
-                  >
-                    Home
-                  </NavLink> */}
                   <NavItem routeName={"Home"} routePath={"/"} />
-                  <NavLink
-                    to={`/all-foods`}
-                    className={({ isActive, isPending }) =>
-                      `nav-item ${
-                        isPending ? "" : isActive ? "bg-gray-200" : ""
-                      }`
-                    }
-                  >
-                    All Foods
-                  </NavLink>
-                  <NavLink
-                    to={`/gallary`}
-                    className={({ isActive, isPending }) =>
-                      `nav-item ${
-                        isPending ? "" : isActive ? "bg-gray-200" : ""
-                      }`
-                    }
-                  >
-                    Gallary
-                  </NavLink>
+                  <NavItem routeName={"All Foods"} routePath={"/all-foods"} />
+                  <NavItem routeName={"Gallary"} routePath={"/gallary"} />
                   <NavItem
                     routeName={"My Purchase"}
                     routePath={"/my-purchase"}
                   />
-
-                  <NavLink
-                    to={`/add-food`}
-                    className={({ isActive, isPending }) =>
-                      `nav-item ${
-                        isPending ? "" : isActive ? "bg-gray-200" : ""
-                      }`
-                    }
-                  >
-                    Add Food
-                  </NavLink>
+                  <NavItem routeName={"Add Food"} routePath={"/add-food"} />
                   {!user && navItems}
                 </ul>
 
