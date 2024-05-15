@@ -7,6 +7,7 @@ import logo from "../../../assets/logo-normal.png";
 import useAuth from "../../../Hooks/useAuth";
 import { IoExitOutline } from "react-icons/io5";
 import toast from "react-hot-toast";
+import NavItem from "./NavItem/NavItem";
 
 const Navbar = () => {
   const { user, userSignOut } = useAuth();
@@ -82,7 +83,7 @@ const Navbar = () => {
                 } absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center`}
               >
                 <ul className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-                  <NavLink
+                  {/* <NavLink
                     to={`/`}
                     className={({ isActive, isPending }) =>
                       `nav-item ${
@@ -91,7 +92,8 @@ const Navbar = () => {
                     }
                   >
                     Home
-                  </NavLink>
+                  </NavLink> */}
+                  <NavItem routeName={"Home"} routePath={"/"} />
                   <NavLink
                     to={`/all-foods`}
                     className={({ isActive, isPending }) =>
@@ -112,6 +114,11 @@ const Navbar = () => {
                   >
                     Gallary
                   </NavLink>
+                  <NavItem
+                    routeName={"My Purchase"}
+                    routePath={"/my-purchase"}
+                  />
+
                   <NavLink
                     to={`/add-food`}
                     className={({ isActive, isPending }) =>

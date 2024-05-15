@@ -9,6 +9,7 @@ import AllFoods from "../Pages/AllFoods/AllFoods";
 import AddFood from "../Pages/AddFood/AddFood";
 import Gallary from "../Pages/Gallary/Gallary";
 import PurchaseFood from "../Pages/PurchaseFood/PurchaseFood";
+import MyPurchase from "../Pages/MyPurchase/MyPurchase";
 // import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 // const axiosSecure = useAxiosSecure();
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
         loader: ({ params }) => {
           return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params?.id}`);
         },
+      },
+      {
+        path: "/my-purchase",
+        element: <MyPurchase />,
       },
       {
         path: "registation",

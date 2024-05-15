@@ -21,7 +21,7 @@ const PurchaseFood = () => {
   const axiosSecure = useAxiosSecure();
   const currentDate = useCurrentDateFormatted();
   const navigate = useNavigate();
-
+  //   console.log("current number", food?.numberOfPurchases);
   const handlePurchase = (data) => {
     // console.log(data);
     const { foodName, buyerName, price, quantity } = data;
@@ -66,6 +66,19 @@ const PurchaseFood = () => {
         if (res.data.acknowledged) {
           toast.success("You sucessfully purchased the food.");
           reset();
+          const PurchaseInfo = {
+            productId: food?._id,
+            purchasesQuantity: parseInt(quantity),
+          };
+          //   console.log(PurchaseInfo);
+          axiosSecure
+            .patch("/foods", PurchaseInfo)
+            .then((res) => {
+              //   console.log(res.data);
+            })
+            .catch((error) => {
+              console.log(error);
+            });
         }
       })
       .catch((error) => {
@@ -152,7 +165,7 @@ const PurchaseFood = () => {
                 <input
                   type="number"
                   min={1}
-                  //   max={5}
+                  max={5}
                   placeholder="Quantity you needed"
                   className="input-field"
                   {...register("quantity", { required: true })}
