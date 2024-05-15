@@ -10,6 +10,7 @@ import AddFood from "../Pages/AddFood/AddFood";
 import Gallary from "../Pages/Gallary/Gallary";
 import PurchaseFood from "../Pages/PurchaseFood/PurchaseFood";
 import MyPurchase from "../Pages/MyPurchase/MyPurchase";
+import MyFoods from "../Pages/MyFoods/MyFoods";
 // import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 // const axiosSecure = useAxiosSecure();
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/my-purchase",
         element: <MyPurchase />,
+      },
+      {
+        path: "/my-foods",
+        element: <MyFoods />,
       },
       {
         path: "registation",

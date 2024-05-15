@@ -76,6 +76,7 @@ const Navbar = () => {
                     routeName={"My Purchase"}
                     routePath={"/my-purchase"}
                   />
+                  <NavItem routeName={"My Foods"} routePath={"/my-foods"} />
                   <NavItem routeName={"Add Food"} routePath={"/add-food"} />
                   {!user && navItems}
                 </ul>

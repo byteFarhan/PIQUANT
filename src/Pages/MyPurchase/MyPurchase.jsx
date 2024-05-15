@@ -27,18 +27,19 @@ const MyPurchase = () => {
         style={{ backgroundImage: `url(${sectionBg})` }}
         className="px-5 py-16 md:py-20 md:px-8 lg:px-0 lg:py-32"
       >
-        <section className="mx-auto bg-white max-w-7xl"></section>
-        <div className="p-6 md:p-8 lg:p-16">
-          {purchases?.length > 0 ? (
-            <>
-              <Table purchases={purchases} setPurchases={setPurchases} />
-            </>
-          ) : (
-            <div className="flex items-center justify-center h-96">
-              <h3 className="text-3xl font-bold text-center">{`You don't purchase any food yet!`}</h3>
-            </div>
-          )}
-        </div>
+        <section className="mx-auto max-w-7xl">
+          <div className="">
+            {purchases?.length > 0 ? (
+              <>
+                <Table purchases={purchases} setPurchases={setPurchases} />
+              </>
+            ) : (
+              <div className="flex items-center justify-center h-96">
+                <h3 className="text-3xl font-bold text-center">{`You don't purchase any food yet!`}</h3>
+              </div>
+            )}
+          </div>
+        </section>
       </section>
     </section>
   );
