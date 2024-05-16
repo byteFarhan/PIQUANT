@@ -44,13 +44,13 @@ const AuthProvider = ({ children }) => {
       const userEmail = currentUser?.email || user?.email;
       const loggedUser = { email: userEmail };
       setUser(currentUser);
-      console.log(currentUser);
+      // console.log(currentUser);
       setLoading(false);
       if (currentUser) {
         axiosSecure
           .post("/jwt", loggedUser)
           .then((res) => {
-            console.log("response token", res.data);
+            // console.log("response token", res.data);
           })
           .catch((error) => {
             console.log(error);
@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
         axiosSecure
           .post("/logout", loggedUser)
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
           })
           .catch((error) => {
             console.log(error);

@@ -16,12 +16,12 @@ const Table = ({ setPurchases, purchases }) => {
           const remainingPurchases = purchases.filter(
             (item) => item._id !== id
           );
-          console.log(remainingPurchases);
+          // console.log(remainingPurchases);
           setPurchases(remainingPurchases);
         }
       })
       .catch((error) => {
-        // console.log(error);
+        console.log(error);
       });
   };
   return (

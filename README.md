@@ -4,6 +4,8 @@
 
 🚀 Additionally, I've incorporated the functionality for users to log in with their other social accounts, such as Google and GitHub.
 
+🚀 I've implemented JWT token authentication for user verification.
+
 🚀 Furthermore, I've implemented a private route concept to restrict access to specific routes unless users are logged in to their accounts, ensuring enhanced security and privacy.
 
 🚀 On the homepage, I've showcased some top selling foods loaded from a MongoDB database.

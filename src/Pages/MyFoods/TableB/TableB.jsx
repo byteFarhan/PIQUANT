@@ -5,11 +5,11 @@ import TableRow from "./TableRow/TableRow";
 const TableB = ({ setMyFoods, myFoods }) => {
   const axiosSecure = useAxiosSecure();
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
     axiosSecure
       .delete(`/foods/${id}`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         if (res.data.deletedCount) {
           toast.success("The food has been deleted successfully.");
           const remainingFoods = myFoods.filter((food) => food._id !== id);

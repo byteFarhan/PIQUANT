@@ -57,7 +57,7 @@ const AddFood = () => {
         laugh: 8,
       },
     };
-    console.log(food);
+    // console.log(food);
     axiosSecure
       .post("/foods", food)
       .then((res) => {
