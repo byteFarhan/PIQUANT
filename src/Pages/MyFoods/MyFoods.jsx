@@ -30,7 +30,15 @@ const MyFoods = () => {
       >
         <section className="mx-auto max-w-7xl">
           <div className="">
-            <TableB myFoods={myFoods} setMyFoods={setMyFoods} />
+            {myFoods?.length > 0 ? (
+              <>
+                <TableB myFoods={myFoods} setMyFoods={setMyFoods} />
+              </>
+            ) : (
+              <div className="flex items-center justify-center h-96">
+                <h3 className="text-3xl font-bold text-center">{`You don't added any food yet!`}</h3>
+              </div>
+            )}
           </div>
         </section>
       </section>

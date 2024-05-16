@@ -63,8 +63,8 @@ const AddFood = () => {
       .then((res) => {
         // console.log(res.data);
         if (res.data.acknowledged) {
-          toast.success("The food has been added successfully.");
           reset();
+          toast.success("The food has been added successfully.");
           navigate("/my-foods");
         }
       })

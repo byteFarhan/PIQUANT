@@ -11,15 +11,21 @@ const Awards = () => {
       <div className="flex-1 space-y-6">
         <h3 className="text-3xl">AWARD WINNING RESTAURANT</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa.
+          Our restaurant has proudly received numerous culinary awards,
+          showcasing our commitment to delivering exceptional flavors and
+          outstanding dining experiences. Recognized for our innovative dishes
+          and impeccable service, we strive to exceed your expectations with
+          every visit. Join us to savor the taste of excellence and discover why
+          our restaurant is celebrated by critics and beloved by guests.
+          Experience award-winning dining that elevates every meal into an
+          unforgettable culinary journey.
         </p>
-        <img src={awards} alt="awards" draggable={false} />
+        <img
+          src={awards}
+          alt="awards"
+          draggable={false}
+          className="cursor-pointer"
+        />
         <h5 className="text-lg">CONTACT INFO</h5>
         <div className="flex flex-col gap-4 md:items-center md:gap-20 md:flex-row">
           <div className="space-y-4">

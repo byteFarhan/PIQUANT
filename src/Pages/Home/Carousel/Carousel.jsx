@@ -50,19 +50,19 @@ const Carousel = () => {
               slideImg={sliderImg1}
               subImg={sliderImg1sub}
               title={`Know Your Food`}
-              description={`Discover tranquility in our serene escapes. From luxury spas to secluded hideaways, find your slice of paradise and unwind.`}
+              description={`Enjoy a memorable meal with our award-winning menu, showcasing the finest ingredients and culinary artistry.`}
             />
             <Slide
               slideImg={sliderImg2}
               subImg={sliderImg2sub}
               title={`Piquant Grill`}
-              description={`Discover tranquility in our serene escapes. From luxury spas to secluded hideaways, find your slice of paradise and unwind.`}
+              description={`Experience our celebrated dishes, crafted to perfection and recognized by top culinary awards. Taste excellence today!`}
             />
             <Slide
               slideImg={sliderImg1}
               subImg={sliderImg3sub}
               title={`High Quality`}
-              description={`Discover tranquility in our serene escapes. From luxury spas to secluded hideaways, find your slice of paradise and unwind.`}
+              description={`Discover the taste of perfection at our award-winning restaurant, where every dish is a masterpiece of flavor and presentation.`}
             />
           </Slider>
         </div>

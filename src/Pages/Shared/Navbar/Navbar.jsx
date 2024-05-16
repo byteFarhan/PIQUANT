@@ -72,16 +72,17 @@ const Navbar = () => {
                   <NavItem routeName={"Home"} routePath={"/"} />
                   <NavItem routeName={"All Foods"} routePath={"/all-foods"} />
                   <NavItem routeName={"Gallary"} routePath={"/gallary"} />
-                  <NavItem
-                    routeName={"My Purchase"}
-                    routePath={"/my-purchase"}
-                  />
-                  <NavItem
-                    routeName={"My Foods"}
-                    routePath={"/my-foods"}
-                    className={user ? "" : "hidden"}
-                  />
-                  <NavItem routeName={"Add Food"} routePath={"/add-food"} />
+                  {user && (
+                    <>
+                      <NavItem
+                        routeName={"My Purchase"}
+                        routePath={"/my-purchase"}
+                      />
+                      <NavItem routeName={"My Foods"} routePath={"/my-foods"} />
+                      <NavItem routeName={"Add Food"} routePath={"/add-food"} />
+                    </>
+                  )}
+
                   {!user && navItems}
                 </ul>
 

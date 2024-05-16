@@ -24,9 +24,9 @@ const BestFoods = () => {
       <div className="w-full mx-auto mb-4 space-y-4 text-center md:w-2/3 md:space-y-5 md:mb-5">
         <h3 className="text-2xl md:text-3xl">Best Foods</h3>
         <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate.
+          Welcome to Best Foods! Indulge in our exquisite dishes, crafted with
+          passion and the freshest ingredients. Experience a memorable dining
+          journey with flavors that delight your senses. Join us today!
         </p>
       </div>
       <div className="grid grid-cols-1 gap-6 pt-6 lg:pt-10 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
