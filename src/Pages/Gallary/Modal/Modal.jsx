@@ -11,11 +11,11 @@ const Modal = ({ reviews, setReviews }) => {
   const axiosSecure = useAxiosSecure();
   const getUserReview = (e) => {
     e.preventDefault();
-    if (!user) {
-      toast.error("You have to sign in your account!");
-      navigate("/login");
-      return;
-    }
+    // if (!user) {
+    //   toast.error("You have to sign in your account!");
+    //   navigate("/login");
+    //   return;
+    // }
     const form = e.target;
     // console.log(form);
     const userName = form.name.value;
