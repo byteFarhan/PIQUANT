@@ -55,6 +55,15 @@ const AuthProvider = ({ children }) => {
           .catch((error) => {
             console.log(error);
           });
+      } else {
+        axiosSecure
+          .post("/logout", loggedUser)
+          .then((res) => {
+            console.log(res.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       }
     });
     return () => {
