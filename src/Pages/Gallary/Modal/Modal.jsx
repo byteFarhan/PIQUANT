@@ -45,12 +45,22 @@ const Modal = ({ reviews, setReviews }) => {
         console.log(error);
       });
   };
+  const handleModal = () => {
+    if (!user) {
+      toast.error("You need to log in to your account to leave a review!");
+      navigate("/login", { state: "/gallary" });
+      return;
+    }
+    document.getElementById("modal").showModal();
+  };
+
   return (
     <div className="mx-auto mt-6 text-center md:mt-8 lg:mt-10">
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
+        // disabled={true}
         className="px-5 py-3 btn-base btn-secondary"
-        onClick={() => document.getElementById("modal").showModal()}
+        onClick={handleModal}
       >
         Add Review
       </button>

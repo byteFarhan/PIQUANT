@@ -151,7 +151,7 @@ const Login = () => {
                   type="submit"
                   className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white uppercase transition-colors duration-300 transform btn-base btn-secondary"
                 >
-                  Sign In
+                  Login
                 </button>
               </div>
             </form>
