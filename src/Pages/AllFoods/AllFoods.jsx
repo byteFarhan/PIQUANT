@@ -4,6 +4,7 @@ import FoodB from "./FoodB/FoodB";
 import SearchField from "./SearchField/SearchField";
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet";
 
 const AllFoods = () => {
   const axiosSecure = useAxiosSecure();
@@ -30,6 +31,9 @@ const AllFoods = () => {
   //   console.log(loadedFoods);
   return (
     <section>
+      <Helmet>
+        <title>PIQUANT | All Foods</title>
+      </Helmet>
       <PageTitle pageTitle={`All Foods Page`} />
       <SearchField
         handleSearch={handleSearch}

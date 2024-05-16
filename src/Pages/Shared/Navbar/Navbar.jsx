@@ -77,9 +77,18 @@ const Navbar = () => {
                       <NavItem
                         routeName={"My Purchase"}
                         routePath={"/my-purchase"}
+                        lgHidden={true}
                       />
-                      <NavItem routeName={"My Foods"} routePath={"/my-foods"} />
-                      <NavItem routeName={"Add Food"} routePath={"/add-food"} />
+                      <NavItem
+                        routeName={"My Foods"}
+                        routePath={"/my-foods"}
+                        lgHidden={true}
+                      />
+                      <NavItem
+                        routeName={"Add Food"}
+                        routePath={"/add-food"}
+                        lgHidden={true}
+                      />
                     </>
                   )}
 
@@ -90,7 +99,7 @@ const Navbar = () => {
                   <>
                     <div
                       className={`flex items-center mt-4 lg:mt-0 lg:tooltip lg:tooltip-bottom z-20 dropdown dropdown-bottom dropdown-end`}
-                      data-tip={user?.displayName}
+                      // data-tip={user?.displayName}
                     >
                       <button
                         type="button"
@@ -112,8 +121,31 @@ const Navbar = () => {
                         </div>
                         <ul
                           tabIndex={0}
-                          className="dropdown-content z-[3] menu px-3 py-4 shadow bg-base-100 rounded-box w-52 text-white hidden lg:block"
+                          className="dropdown-content z-[3] menu px-3 py-4 shadow bg-base-100 rounded-box w-52 text-white hidden lg:block space-y-4"
                         >
+                          <li>
+                            <NavItem
+                              routeName={"My Purchase"}
+                              routePath={"/my-purchase"}
+                            />
+                          </li>
+                          <li>
+                            <NavItem
+                              routeName={"My Foods"}
+                              routePath={"/my-foods"}
+                            />
+                          </li>
+                          <li>
+                            <NavItem
+                              routeName={"Add Food"}
+                              routePath={"/add-food"}
+                            />
+                          </li>
+                          <li>
+                            <p className="font-semibold font-oswald text-secondary">
+                              {user?.displayName}
+                            </p>
+                          </li>
                           <li>
                             <p
                               onClick={handleLogout}

@@ -6,6 +6,7 @@ import { GoHeart } from "react-icons/go";
 import { MdOutlineCoffeeMaker, MdOutlineDiscount } from "react-icons/md";
 import { GiWorld } from "react-icons/gi";
 import { PiChefHatDuotone } from "react-icons/pi";
+import { Helmet } from "react-helmet";
 
 const FoodDetails = () => {
   const food = useLoaderData();
@@ -34,6 +35,9 @@ const FoodDetails = () => {
   //   console.log(ingredients);
   return (
     <section>
+      <Helmet>
+        <title>PIQUANT | {foodName}</title>
+      </Helmet>
       <PageTitle pageTitle={foodName} />
       <section
         style={{ backgroundImage: `url(${sectionBg})` }}
@@ -77,12 +81,15 @@ const FoodDetails = () => {
                       <MdOutlineDiscount /> Favourit
                     </p>
                   </div>
-                  <div className="flex gap-10 *:flex *:items-center *:gap-2 mt-6 *:text-secondary">
+                  <div className="flex flex-wrap gap-y-3 gap-x-8 md:gap-x-10 *:flex *:items-center *:gap-2 mt-6 *:text-secondary">
                     <p>
                       <GiWorld /> {foodOrigin}
                     </p>
                     <p>
                       <PiChefHatDuotone /> {madeBy}
+                    </p>
+                    <p className="font-medium">
+                      Number Of Purchase: {numberOfPurchases}
                     </p>
                   </div>
                   <div className="mt-4 space-y-6">

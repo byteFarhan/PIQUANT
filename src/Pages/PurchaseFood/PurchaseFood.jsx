@@ -6,6 +6,7 @@ import useAuth from "../../Hooks/useAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useCurrentDateFormatted from "../../Hooks/useCurrentDateFormatted";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const PurchaseFood = () => {
   const food = useLoaderData();
@@ -88,6 +89,9 @@ const PurchaseFood = () => {
   };
   return (
     <section>
+      <Helmet>
+        <title>PIQUANT | Food Purchase</title>
+      </Helmet>
       <PageTitle pageTitle={"Food Purchase"} />
       <section
         style={{ backgroundImage: `url(${sectionBg})` }}

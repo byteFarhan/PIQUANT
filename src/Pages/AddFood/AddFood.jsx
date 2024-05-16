@@ -7,6 +7,7 @@ import useCurrentDateFormatted from "../../Hooks/useCurrentDateFormatted";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 const AddFood = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -74,6 +75,9 @@ const AddFood = () => {
   };
   return (
     <section>
+      <Helmet>
+        <title>PIQUANT | Add Food</title>
+      </Helmet>
       <PageTitle pageTitle={"Add New Food"} />
       <section
         style={{ backgroundImage: `url(${sectionBg})` }}

@@ -4,6 +4,7 @@ import PageTitle from "../Shared/PageTitle/PageTitle";
 import GallaryCard from "./GallaryCard/GallaryCard";
 import Modal from "./Modal/Modal";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Gallary = () => {
   const loadedReviews = useLoaderData();
@@ -15,6 +16,9 @@ const Gallary = () => {
 
   return (
     <section>
+      <Helmet>
+        <title>PIQUANT | Gallary</title>
+      </Helmet>
       <PageTitle pageTitle={`Gallery of Reviews `} />
       <section
         style={{ backgroundImage: `url(${sectionBg})` }}

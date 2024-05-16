@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const Registation = () => {
   const { createUserWithEmail, setUser, user } = useAuth();
@@ -64,6 +65,9 @@ const Registation = () => {
   };
   return (
     <section className="" style={{ backgroundImage: `url(${bgImg})` }}>
+      <Helmet>
+        <title>PIQUANT | Register</title>
+      </Helmet>
       <div className="flex items-center justify-center py-20">
         <div className="flex flex-row-reverse w-full max-w-sm mx-auto overflow-hidden bg-white shadow-md md:max-w-md lg:max-w-4xl">
           <div

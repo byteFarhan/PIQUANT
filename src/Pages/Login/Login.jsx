@@ -8,6 +8,7 @@ import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import useAuth from "../../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInWithEmail } = useAuth();
@@ -35,6 +36,9 @@ const Login = () => {
   };
   return (
     <section className="" style={{ backgroundImage: `url(${bgImg})` }}>
+      <Helmet>
+        <title>PIQUANT | Login</title>
+      </Helmet>
       <div className="flex items-center justify-center py-20">
         <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white shadow-md md:max-w-md lg:max-w-4xl">
           <div

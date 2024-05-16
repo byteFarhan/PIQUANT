@@ -5,6 +5,7 @@ import sectionBg from "../../assets/pattern-2.png";
 
 import PageTitle from "../Shared/PageTitle/PageTitle";
 import TableB from "./TableB/TableB";
+import { Helmet } from "react-helmet";
 
 const MyFoods = () => {
   const axiosSecure = useAxiosSecure();
@@ -23,6 +24,9 @@ const MyFoods = () => {
   // console.log(myFoods);
   return (
     <section>
+      <Helmet>
+        <title>PIQUANT | My Foods</title>
+      </Helmet>
       <PageTitle pageTitle={`Your Added Foods`} />
       <section
         style={{ backgroundImage: `url(${sectionBg})` }}

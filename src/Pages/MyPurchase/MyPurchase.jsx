@@ -4,6 +4,7 @@ import Table from "./Table/Table";
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const MyPurchase = () => {
   const axiosSecure = useAxiosSecure();
@@ -22,6 +23,9 @@ const MyPurchase = () => {
   //   console.log(purchases);
   return (
     <section>
+      <Helmet>
+        <title>PIQUANT | My Purchase</title>
+      </Helmet>
       <PageTitle pageTitle={"My Purchase"} />
       <section
         style={{ backgroundImage: `url(${sectionBg})` }}

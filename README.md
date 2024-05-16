@@ -1,3 +1,5 @@
+## 🔗 [PIQUANT](https://piquant-b9a11.web.app/) assignment_category_0005
+
 ## Features of this project
 
 🚀 I've implemented an authentication system using Firebase, enabling users to register and log in to their accounts securely.
@@ -28,8 +30,8 @@
 
 🔥 React Hot Toast
 
-🔥 React-simple-typewriter
+🔥 JSON Web Token
 
-## 🔗 [PIQUANT](https://piquant-b9a11.web.app/)
+🔥 React-simple-typewriter
 
 [Live link](https://piquant-b9a11.web.app/)
