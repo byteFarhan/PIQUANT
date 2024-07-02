@@ -8,6 +8,7 @@ import sliderImg1 from "../../../assets/sliderImg/home-1-slide-1-graphic-2.png";
 import sliderImg1sub from "../../../assets/sliderImg/home-1-slide-1-graphic-1.png";
 import sliderImg2 from "../../../assets/sliderImg/home-1-slide-1-graphic-8.png";
 import sliderImg2sub from "../../../assets/sliderImg/home-1-slide-1-graphic-9.png";
+
 import sliderImg3 from "../../../assets/sliderImg/landing-slide-left-3.png";
 import sliderImg3sub from "../../../assets/sliderImg/home-1-slide-1-graphic-10.png";
 

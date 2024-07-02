@@ -35,18 +35,26 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params.id}`);
+          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params.id}`, {
+            credentials: "include",
+          });
         },
       },
       {
         path: "/all-foods",
         element: <AllFoods />,
-        loader: () => fetch(`${import.meta.env.VITE_BASE_URL}/foods`),
+        loader: () =>
+          fetch(`${import.meta.env.VITE_BASE_URL}/foods`, {
+            credentials: "include",
+          }),
       },
       {
         path: "/gallary",
         element: <Gallary />,
-        loader: () => fetch(`${import.meta.env.VITE_BASE_URL}/reviews`),
+        loader: () =>
+          fetch(`${import.meta.env.VITE_BASE_URL}/reviews`, {
+            credentials: "include",
+          }),
       },
       {
         path: "/add-food",
@@ -64,7 +72,9 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params.id}`);
+          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params.id}`, {
+            credentials: "include",
+          });
         },
       },
       {
@@ -75,7 +85,9 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params?.id}`);
+          return fetch(`${import.meta.env.VITE_BASE_URL}/food/${params?.id}`, {
+            credentials: "include",
+          });
         },
       },
       {
@@ -95,7 +107,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "registation",
+        path: "/registation",
         element: <Registation />,
       },
       {

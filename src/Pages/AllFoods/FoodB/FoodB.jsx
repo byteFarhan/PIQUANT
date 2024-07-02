@@ -32,7 +32,7 @@ const FoodB = ({ food }) => {
           <img
             src={foodImage}
             alt={foodName}
-            className="object-cover cursor-pointer w-full h-[450px] transition-transform duration-200 delay-200 ease-in-out hover:scale-105"
+            className="object-cover cursor-pointer w-full h-[450px] transition-transform duration-200 delay-200 ease-in hover:scale-105"
           />
         </div>
 
